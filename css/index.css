@@ -1,0 +1,537 @@
+@font-face{
+
+    font-family: quicksand-bold;
+    src: url('../fonts/Quicksand-Bold.ttf');
+}
+@font-face{
+    font-family: quicksand-light;
+    src: url('../fonts/Quicksand-Light.ttf');
+}
+@font-face{
+    font-family: quicksand-regular;
+    src: url('../fonts/Quicksand-Regular.ttf');
+}
+
+:root{
+    --red-hex:#C02425;
+    --yellow-hex:#F0CB35;
+    --green-hex:#2F7336;
+}
+
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*Main container*/
+#main_container{
+    background:#ffffff;
+    
+}
+
+/*All section*/
+.section_all{
+    min-height:100vh;
+    width:100%;
+}
+
+/****************
+    Section-1 Header_back_image
+    ***************/
+
+#header_back_image{
+    background:linear-gradient(#0009,#0009), url('https://vaibhavkaul69.github.io/KalzBurger/assets/back-bg.jpg') center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header_back_image > .header_logo_image{
+    height:400px;
+    width: 400px;
+    position: relative;
+    top:-50px;
+    filter: drop-shadow(5px 5px 2px var(--green-hex));
+}
+
+#header_back_image  > .header_title{
+    font-size: 2.5rem;
+    color:var(--yellow-hex);
+    font-family: quicksand-bold;
+    text-align: center;
+    position: relative;
+    top:-60px;
+}
+
+#header_back_image > .line_seperator{
+    border:1px solid var(--red-hex);
+    width: 10%;
+    position: relative;
+    top:-40px;
+}
+#header_back_image > .header_button{
+    min-height:50px;
+    width:150px;
+    font-family: quicksand-bold;
+    background:transparent;
+    color:var(--yellow-hex);
+    font-size: 1rem;
+    margin-bottom:2rem ;
+    outline: none;
+    transition:all 0.2s ease-in-out;
+    border:1px solid var(--red-hex);
+}
+
+#header_back_image > .header_button:hover{
+    color:var(--red-hex);
+    background:var(--yellow-hex);
+    border:1px solid var(--yellow-hex);
+    border-radius:10px;
+}
+
+/****************
+    Section-2 menu_items
+    ***************/
+
+    #menu_items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section_heading{
+        font-family: quicksand-bold;
+        font-size: 3rem;
+        color:var(--yellow-hex);
+        text-align:center;
+       margin-top:2rem;
+    }
+
+    .section_heading + .line_seperator{
+        width:20%;
+        margin:20px auto;
+        border:1px solid var(--red-hex);
+    }
+    .section_tagline{
+        font-family: quicksand-regular;
+        font-size: 1.5rem;
+        text-align: center;
+        width:80%;
+        margin:0rem auto;
+        color:var(--red-hex);
+    }
+    .veg_items,
+    .nonveg_items,
+    .fastfood_items {
+        display: none;
+        opacity: 0;
+        width:95%;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        margin:10px auto;
+        padding:10px;
+        grid-gap:10px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition:all 0.5s ease-in-out;
+      }
+      .item-body{
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        padding: 10px;
+        border-radius: 10px;
+        overflow-y: hidden;
+        background-color: #ffffff;
+      }
+
+      .item-body:hover .items_cover_image{
+          transform: scale(1.1);
+          border-radius: 10px;
+      }
+      .items_cover_image {
+        width: 100%;
+        height: 12rem;
+        object-fit: cover;
+      }
+      .items_title {
+        color: #222;
+        font-weight: 700;
+        text-align: center;
+        text-transform: capitalize;
+        font-family: quicksand-light;
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+      }
+      .toggle_items {
+        font-family: quicksand-bold;
+        background:linear-gradient(to right bottom ,rgba(192, 36, 37, 0.5),rgba(47, 115, 54, 0.5),rgba(240, 203, 53, 0.5));
+        color: #ffffff;
+        cursor: pointer;
+        padding: 18px;
+        width: 90%;
+        border: none;
+        display: block;
+        margin:2rem auto;
+        text-align: left;
+        outline: none;
+        font-size: 20px;
+        position: relative;
+      }
+
+      .toggle_items  > .icon{
+          height:30px;
+          width: 30px;
+          font-weight: 900;
+          position: relative;
+          top:8px;
+          left:0px;
+      }
+      .toggle_items  > span{
+          float: right;
+      }
+
+      /****************
+    Section-3 Add your first visit section
+    ***************/
+      .flex-contain{
+          display: flex;
+          align-items: center;
+      }
+      .add_visit_btn{
+          height:50px;
+          width:300px;
+          outline: none;
+          font-family: quicksand-regular;
+          font-size: 1.3rem;
+          margin:3rem auto;
+          display: inline-block;
+          background-color: transparent;
+          color:var(--red-hex);
+          border:1px solid var(--red-hex);
+          transition: all 0.5s ease-in-out;
+      }
+      .view_previous_order_btn{
+        font-family: quicksand-regular;
+        text-decoration: none;
+        margin:1rem auto;
+        width:300px;
+        text-align: center;
+        color:var(--red-hex);
+        height:50px;
+        padding: 10px;
+        font-size: 1.3rem;
+        transition:all 0.2s ease-in-out;
+        border:1px solid var(--red-hex);
+      }
+
+      .view_previous_order_btn:hover{
+          color:#ffffff;
+          border:1px solid #ffffff;
+          background:var(--red-hex);
+          border-radius: 10px;
+      }
+
+      .add_visit_btn:hover{
+          border-color:#ffffff;
+          color:#ffffff;
+          font-size:1.5rem;
+          background-color: var(--red-hex);
+          border-radius:10px;
+      }
+
+      .add_visit_form{
+          position: relative;
+          min-height:300px;
+          width:400px;
+          font-family: quicksand-bold;
+          margin:3rem auto;
+          padding:20px;
+          display: none;
+          opacity: 0;
+          transition: all 0.5s ease-in-out;
+          flex-direction: column;
+          justify-content: space-evenly;
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px 5px rgba(0, 0, 0, 0.23);
+          border-radius: 20px;
+      }
+
+       .add_visit_form > .form_date_input{
+          height:40px;
+          width: 100%;
+          margin:1rem 0rem;
+          font-family: quicksand-regular;
+          text-align: center;
+      }
+
+      .ordered-items > .order_items_input{
+          width:75%;
+          height:40px;
+          margin:1rem 0rem;
+          font-family: quicksand-regular;
+          text-align: center;
+      }
+
+      .ordered-items > .order_items_btn{
+          height:43px;
+          width:20%;
+          color:#ffffff;
+          border:1px solid var(--green-hex);
+          background: var(--green-hex);
+          font-family: quicksand-regular;
+          font-size: 1rem;
+          border-radius: 10px;
+      }
+
+      .add_visit_form > .submit_visit_data_btn{
+          min-height:35px;
+          text-decoration: none;
+          width:40%;
+          text-align: center;
+          font-family: quicksand-regular;
+          font-size: 1rem;
+          bottom:20px;
+          right:10px;
+          margin:1.5rem auto;
+          color:var(--green-hex);
+          border:1px solid var(--green-hex);
+          background: white;
+          transition:all 0.2s ease-in-out;
+      }
+
+      .add_visit_form > .submit_visit_data_btn:hover{
+            color:#ffffff;
+          border:1px solid var(--green-hex);
+          background: var(--green-hex);
+          border-radius: 10px;
+      }
+
+      
+      /***
+      Ordered Items List
+      ***/
+
+      #container_ordered_items{
+        counter-reset: section;
+        margin-bottom:2rem;
+      }
+      
+      .listItem
+        {
+            list-style-type: none;
+            width:100%;
+            padding-top:15px;
+            padding-right:45px;
+            padding-bottom:15px;
+            padding-left:5px;
+            position: relative;
+            min-height:50px;
+            margin-top:10px;
+            text-align:left;
+            word-break:break-all;
+            border:1px solid var(--green-hex);
+            color:var(--green-hex);
+            font-weight: bolder;
+            transition:all 1s ease-in-out;
+        }
+        .listItem >p{
+            padding:0px;
+            outline: none;
+        }
+
+        .listItem >p::before {
+            counter-increment: section;
+            content: counter(section) ": ";
+            color:var(--red-hex);
+            width: 0px;
+        }
+        #container_ordered_items > li >.closeBtn
+        {
+            position: absolute;
+            color:var(--yellow-hex);
+            font-family: quicksand-bold;
+            right:0;
+            top:0;
+            border:none;
+            border:none;
+            height:100%;
+            width:40px;
+            font-weight: bolder;
+            text-align: center;
+            background:var(--green-hex);
+        }
+
+      input:focus{
+            outline: none;
+            border:1px solid var(--green-hex)
+      }
+      button{
+          outline: none;
+      }
+
+      
+      /****************
+    Section-4 Loyalty Timeline
+    ***************/
+    #loyalty_timeline  {
+       width:50%;
+        margin:10px auto;
+        padding:10px;
+        border-radius: 10px;
+       border:none;
+        transition:all 0.5s ease-in-out;
+    }
+
+    #loyalty_timeline > .first_visit_card{
+        height:200px;
+        width:300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        border:1px solid #000;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        border-radius: 10px;
+        text-transform: capitalize;
+        font-family: quicksand-bold;
+    }
+    #loyalty_timeline > .loyalty_cards{
+        height:300px;
+        min-width:300px;
+        font-family: quicksand-bold;
+        text-transform: capitalize;
+        display: none;
+        opacity: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:20px;
+        text-align:center;
+        border:1px solid #000;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        padding: 10px;
+        border-radius: 10px;
+        overflow-y: hidden;
+        transition: all 0.5s ease-in-out;
+        background-color: #ffffff;
+    }
+
+    .loyalty_cards > strong,
+    .first_visit_card > strong{
+        background:linear-gradient(to right bottom,var(--red-hex),var(--green-hex),var(--yellow-hex));
+        padding:10px;
+       color:#fff;
+    }
+    #loyalty_timeline > .active{
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+    }
+
+    #loyalty_timeline > .redeem{
+        background:linear-gradient(to right bottom ,rgba(192, 36, 37, 0.5),rgba(47, 115, 54, 0.5),rgba(240, 203, 53, 0.5));
+    }
+      .redeemMenu{
+        counter-reset: section;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .redeemMenu > .redeemItems{
+            list-style-type: none;
+            width:100%;
+            padding:0px;
+            font-family: quicksand-regular;
+            position: relative;
+            min-height:20px;
+            margin-top:10px;
+            text-align:left;
+            padding: 5px;
+            word-break:break-all;
+            color:var(--green-hex);
+            font-weight: bolder;
+            border:1px solid var(--green-hex);
+            transition:all 1s ease-in-out;
+      }
+      
+      .redeemMenu >  h3{
+          color:var(--red-hex);
+      }
+      .redeemMenu > .redeemItems > .itemName{
+            padding:0px;
+            outline: none;
+      }
+
+      .redeemMenu > .redeemItems > .itemName::before{
+        counter-increment: section;
+        content: counter(section) ": ";
+        color:var(--red-hex);
+        width: 0px;
+      }
+
+      .redeemMenu > .redeemItems > .redeemBtn{
+            position: absolute;
+            color:var(--yellow-hex);
+            right:0;
+            top:0;
+            border:none;
+            border:none;
+            height:100%;
+            width:auto;
+            padding: 5px;
+            text-align: center;
+            background:var(--green-hex);
+      }
+      
+      /******
+        Little Bit of Responsiveness
+        ********/
+        @media only screen and (max-width:450px){
+            #loyalty_timeline {
+                width:100%;
+            }
+            .flex-contain{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        @media only screen and (max-width:400px){
+
+            #header_back_image > .header_logo_image{
+                height:100%;
+                width: 100%;
+                position: static;
+            }
+            #header_back_image  > .header_title{
+                font-size: 2rem;
+                position: static;
+            }
+            
+            #header_back_image > .line_seperator{
+                border:1px solid var(--red-hex);
+                width: 20%;
+                margin:0.5rem auto;
+                position: static;
+            }
+            #header_back_image > .header_button{
+                margin:1rem auto;
+                font-size: 1rem;
+            }
+            .menu_tagline{
+                font-size: 1rem;
+            }
+            .add_visit_btn{
+                width:80%;
+            }
+            .add_visit_form{
+                width: 90%;
+            }
+            .ordered-items > .order_items_btn{
+                font-size: 1rem;
+                width:22%;
+            }
+            
+        }

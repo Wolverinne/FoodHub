@@ -1,0 +1,172 @@
+    @font-face{
+
+        font-family: quicksand-bold;
+        src: url('../fonts/Quicksand-Bold.ttf');
+    }
+    @font-face{
+        font-family: quicksand-light;
+        src: url('../fonts/Quicksand-Light.ttf');
+    }
+    @font-face{
+        font-family: quicksand-regular;
+        src: url('../fonts/Quicksand-Regular.ttf');
+    }
+
+    :root{
+        --red-hex:#C02425;
+        --yellow-hex:#F0CB35;
+        --green-hex:#2F7336;
+       
+    }
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    h3{
+        font-family: quicksand-light;
+        font-size: 1.5rem;
+        color:var(--green-hex);
+        text-align: center;
+    }
+    body{
+        background:linear-gradient(#0009,#0009), url('https://vaibhavkaul69.github.io/KalzBurger/assets/back-bg.jpg') center no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background:white;
+        width: 100%;
+        position: sticky;
+        top:0;
+        left:0;
+        box-sizing: border-box;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        z-index: 10;
+        padding: 10px;
+    }
+
+    .navbar > .navbar_logo{
+        height:80px;
+        width:80px;
+    }
+
+    .navbar > .homepage_redirect{
+        font-family: quicksand-bold;
+        color:var(--green-hex);
+        text-decoration:none;
+        border:1px solid var(--green-hex);
+        padding: 10px;
+        transition:all 0.2s ease-in;
+    }
+
+    .navbar > .homepage_redirect:hover{
+        background-color: var(--green-hex);
+        color:#ffffff;
+        border-radius: 10px;
+    }
+
+    #orders{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+    h3 > span{
+        font-family: quicksand-light;
+        font-size: 2rem;
+        color:var(--red-hex);
+        text-align: center;
+    }
+    ul{
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        counter-reset: section;
+        background:#ffffff;
+        padding:20px;
+        margin:1rem;
+    }
+    .listItem
+    {
+
+        list-style-type: none;
+        width:80%;
+        padding:10px;
+        position: relative;
+        min-height:30px;
+        margin:10px auto;
+        text-align:left;
+        word-break:break-all;
+        border:1px solid var(--green-hex);
+        color:var(--green-hex);
+        font-weight: bolder;
+        transition:all 1s ease-in-out;
+    }
+    .listItem >p{
+        padding:0px;
+        font-family: quicksand-bold;
+        text-transform: capitalize;
+        outline: none;
+    }
+
+    .listItem >p::before {
+        counter-increment: section;
+        font-family: quicksand-bold;
+        content: counter(section) ": ";
+        color:var(--red-hex);
+        width: 0px;
+    }
+    .listItem >.closeBtn
+    {
+        display:none;
+    }
+
+    .clear_visitCount_local_storage{
+        position:fixed;
+        bottom:10px;
+        right:10px;
+        color:#ffffff;
+        background-color: transparent;
+        border:none;
+    }
+
+    .loyalty_cards{
+        height:300px;
+        min-width:300px;
+        font-family: quicksand-bold;
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:20px;
+        text-align:center;
+        border:1px solid #000;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        padding: 10px;
+        margin:3rem auto;
+        border-radius: 10px;
+        overflow-y: hidden;
+        transition: all 0.5s ease-in-out;
+        background-color: #ffffff;
+    }
+
+
+    .loyalty_cards > strong{
+        background:linear-gradient(to right bottom,var(--red-hex),var(--green-hex),var(--yellow-hex));
+        padding:10px;
+        color:#fff;
+    }
+
+    @media only screen and (max-width:450px){
+        ul{
+            width:100%;
+        }
+        .loyalty_cards{
+            min-width: 100%;
+        }
+    }

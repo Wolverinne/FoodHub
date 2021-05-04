@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link rel="icon" href="assets/website-logo.png"/>
+        <link rel="stylesheet" href="css/index.css"/>
+        <title>KalzBurger</title>
+    </head>
+    <body>
+        <main id="main_container">
+            <section id="header_back_image" class="section_all">
+                <img class="header_logo_image" src="assets/website-logo.png" alt="Logo-Image"/>
+                <h1 class="header_title">PEOPLE WHO LOVE TO EAT <br/> ARE ALWAYS THE BEST PEOPLE</h1>
+                <hr class="line_seperator"/>
+                <button class="header_button">Explore Menu</button>
+            </section>
+
+            <section id="menu_items" class="section_all">
+                <h1 class="section_heading">OUR MENU</h1>
+                <hr class="line_seperator"/>
+                <h2 class="section_tagline">"Cooking is all about people. Food is maybe the only universal thing that really has the power to bring everyone together. No matter what culture, everywhere around the world, people eat together."</h2>
+                <button class="toggle_items "> 
+                   VEG 
+                    <img class="icon" src="assets/veg-icon.png" alt="Vegetarian Dish Icon">
+                    <span>&darr;</span>
+                </button>
+                <div class="veg_items"></div>
+                <button class="toggle_items "> 
+                  NON-VEG
+                    <img class="icon" src="assets/nonveg-icon.png" alt="Vegetarian Dish Icon">
+                    <span>&darr;</span>
+                </button>
+                <div class="nonveg_items"></div>
+                <button class="toggle_items "> 
+                    FASTFOOD
+                    <img class="icon" src="assets/fastfood-icon.png" alt="Vegetarian Dish Icon">
+                    <span>&darr;</span>
+                </button>
+                <div class="fastfood_items"></div>
+            </section>
+            <section id="add_visit" class="section_all" >
+                <h1 class="section_heading">NEW HERE ?</h1>
+                <br/>
+                <h2 class="section_tagline">DON'T FORGET TO ADD YOUR VISIT WITH US.&#x1F61C;</h2> 
+                <div class="flex-contain">
+                    <button class="add_visit_btn">ADD VISIT</button>
+                    <a href="previous-orders.html" class="view_previous_order_btn" target="_top" class="submit_visit_data_btn">View Previous Orders</a>
+                </div>
+                <div class="add_visit_form">
+                    <h3 class="form_date_label">Enter Visit Date :</h3>
+                    <input class="form_date_input" type="date" name="date_form" placeholder="Enter the Date"/>
+                    <h3 class="form_order_label">Ordered Items :</h3>
+                    <div class="ordered-items">
+                        <input class="order_items_input" type="text" name="order-items" placeholder="Order Here"/>
+                        <button class="order_items_btn">Order</button>
+                        <ul id="container_ordered_items"></ul>
+                    </div>
+                    <button class="submit_visit_data_btn">Submit</button>
+                </div>
+
+                <h1 class="section_heading">LOYALTY TIMELINE</h1>
+                <div id="loyalty_timeline">
+                    <div class="loyalty_cards">
+                        today is your first visit
+                        <br/>
+                        <br/>
+                        <strong>Happy Fooding.!</strong>
+                    </div>
+                    <div class="loyalty_cards redeem">
+                        <ul class="redeemMenuVeg redeemMenu">
+                            <h3>Redeem any one item below.</h3>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Shaahi Paneer</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Chole Masala</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Baingan Bharta</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="loyalty_cards">
+                        Today is your 3rd visit <br/>
+                        in your 5th visit you will recieve a redeem food item coupon.
+                        <br/>
+                        <br/>
+                        <strong>Happy Fooding.!</strong>
+                    </div>
+                    <div class="loyalty_cards">
+                        Today is your 4th visit <br/>
+                        in your 5th visit you will recieve a redeem food item coupon.
+                        <br/>
+                        <br/>
+                        <strong>Happy Fooding.!</strong>
+                    </div>
+                    <div class="loyalty_cards redeem">
+                        <ul class="redeemMenuNonVeg redeemMenu">
+                            <h3>Redeem any one item below.</h3>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Butter Chicken</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Chicken Cutlet</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Tandoori Chicken</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="loyalty_cards ">
+                        Today is 6th First visit <br/>
+                        in your 8th visit you will recieve a redeem food item coupon.
+                        <br/>
+                        <br/>
+                        <strong>Happy Fooding.!</strong>
+                    </div>
+                    <div class="loyalty_cards ">
+                        Today is 7th First visit <br/>
+                        in your 8th visit you will recieve a redeem food item coupon.
+                        <br/>
+                        <br/>
+                        <strong>Happy Fooding.!</strong>
+                    </div>
+                    <div class="loyalty_cards redeem">
+                        <ul class="redeemMenuFastFood redeemMenu">
+                            <h3>Redeem any one item below.</h3>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Spring Rolls</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Burger</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Veg Momos</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="loyalty_cards ">
+                        Today is 9th First visit <br/>
+                        in your 11th visit you will recieve a redeem food item coupon.
+                        <br/>
+                        <br/>
+                        <strong>Happy Fooding.!</strong>
+                    </div>
+                    <div class="loyalty_cards ">
+                        Today is 10th First visit <br/>
+                        in your 11th visit you will recieve a redeem food item coupon.
+                        <br/>
+                        <br/>
+                        <strong>Happy Fooding.!</strong>
+                    </div>
+                    <div class="loyalty_cards redeem ">
+                        <ul class="redeemMenuMix redeemMenu">
+                            <h3>Redeem any one item below.</h3>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Pizza</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Rajma Masala</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                            <li class='redeemItems'>
+                                <p class='itemName'>Chicken Bryani</p>
+                                <button class='redeemBtn'>Redeem</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="loyalty_cards ">
+                        Today is 12th First visit <br/>
+                        in your 13th visit you will recieve a redeem food item coupon.
+                        <br/><br/>
+                        Last Coupon For This Month.!
+                        <br/><br/>
+                        <strong>Happy Fooding.!</strong>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+    </body>
+    <script src="js/app.js"></script>
+</html>
+
