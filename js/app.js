@@ -110,7 +110,7 @@ const itemsOrderWithDate=()=>{
     localStorage.setItem('itemsOrderedOnVisitNumber_'+visitCount,JSON.stringify(itemsOrderedOnVisitNumber));
     setTimeout(()=>{
             alert('Visit Added Successfully.');
-            window.open();
+            window.open('https://wolverinne.github.io/FoodHub//index.html','_top');
     },10);
     document.querySelector('.form_date_input').value='';
     document.getElementById('container_ordered_items').innerHTML='';
